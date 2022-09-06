@@ -27,7 +27,7 @@ variable "instance_type" {
 }
 
 variable "image_id" {
-  //default = "ami-052efd3df9dad4825"
+  default = "ami-052efd3df9dad4825"
   type = string
 }
 
@@ -49,4 +49,13 @@ output "appserver_privateip" {
 
 output "appserver1_privateip" {
   value = aws_instance.app_server1.private_ip
+}
+
+output "appserver1_arn" {
+  value = aws_instance.app_server1.arn
+}
+
+
+output "appserver1_instancestate" {
+  value = aws_instance.app_server1.instance_state
 }
